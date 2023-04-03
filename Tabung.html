@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Square Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image" href="/images/logo.png">
+</head>
+
+<body>
+    <div class="navbar">
+        <div>
+            <a href="/kerucut.html">Kerucut</a>
+            <a href="/index.html">Lingkaran</a>
+            <a href="/bola.html">Bola</a>
+            <a href="/Tabung.html">Tabung</a>
+        </div>
+    </div>
+    <div class="container">
+        <label>Luas Permukaan Tabung π = 22/7</label><br>
+        <div>
+            <input type="text" id="r" placeholder="Jari-jari tabung"><br>
+            <input type="text" id="t" placeholder="Tinggi tabung">
+        </div>
+        <button id="luas" onclick="luasPermukaan()">Calculate</button>
+        <label style="font-weight: bold;">Hasil = <label id="hasil"></label></label>
+    </div>
+    <hr>
+    <div class="container2">
+        <label>Luas Permukaan Tabung π = 3.14</label><br>
+        <div>
+            <input type="text" id="r2" placeholder="Jari-jari Tabung"><br>
+            <input type="text" id="t2" placeholder="Tinggi Tabung"><br>
+        </div>
+        <button id="luas" onclick="luasPermukaan2()">Calculate</button>
+        <label style="font-weight: bold;">Hasil = <label id="hasil2"></label></label>
+    </div>
+    <hr>
+    <div class="container2">
+        <label>Volume Tabung π = 22/7</label><br>
+        <div>
+            <input type="text" id="r3" placeholder="Jari-Jari Tabung"><br>
+            <input type="text" id="t3" placeholder="Tinggi Tabung"><br>
+        </div>
+        <button id="luas" onclick="volumeTabung()">Calculate</button>
+        <label style="font-weight: bold;">Hasil = <label id="hasil3"></label></label>
+    </div>
+    <hr>
+    <div class="container2">
+        <label>Volume Tabung π = 3.14</label><br>
+        <div>
+            <input type="text" id="r4" placeholder="Jari-Jari Tabung"><br>
+            <input type="text" id="t4" placeholder="Tinggi Tabung"><br>
+        </div>
+        <button id="luas" onclick="volumeTabung2()">Calculate</button>
+        <label style="font-weight: bold;">Hasil = <label id="hasil4"></label></label>
+    </div>
+
+    <script>
+        const jariJari = document.getElementById('r')
+        const hasil = document.getElementById('hasil')
+        const jariJari2 = document.getElementById('r2')
+        const hasil2 = document.getElementById('hasil2')
+        const jariJari3 = document.getElementById('r3')
+        const hasil3 = document.getElementById('hasil3')
+        const jariJari4 = document.getElementById('r4')
+        const jariJari5 = document.getElementById('r5')
+        const tinggi = document.getElementById('t')
+        const tinggi2 = document.getElementById('t2')
+        const tinggi3 = document.getElementById('t3')
+        const tinggi4 = document.getElementById('t4')
+        const tinggi5 = document.getElementById('t5')
+        const hasil4 = document.getElementById('hasil4')
+        const hasil5 = document.getElementById('hasil5')
+
+        function luasPermukaan(value) {
+            const proses = 2 * ParseFloat(jariJari.value.replace(',', '.')) * 22 / 7 * (ParseFloat(jariJari.value.replace(',', '.')) + ParseFloat(tinggi.value.replace(',', '.')))
+            hasil.innerHTML = proses.toLocaleString('id-ID')
+        }
+
+        function luasPermukaan2(value) {
+            const proses2 = 2 * ParseFloat(jariJari2.value.replace(',', '.')) * 3.14 * (ParseFloat(jariJari2.value.replace(',', '.')) + ParseFloat(tinggi2.value.replace(',', '.')))
+            hasil2.innerHTML = proses2.toLocaleString('id-ID')
+        }
+
+        function volumeTabung(value) {
+            const proses3 = 22/7 * ParseFloat(jariJari3.value.replace(',', '.')) * ParseFloat(jariJari3.value.replace(',', '.')) * ParseFloat(tinggi3.value.replace(',', '.'))
+            hasil3.innerHTML = proses3.toLocaleString('id-ID')
+        }
+
+        function volumeTabung2(value) {
+            const proses4 = 3.14 * ParseFloat(jariJari4.value.replace(',', '.')) * ParseFloat(jariJari4.value.replace(',', '.')) * ParseFloat(tinggi4.value.replace(',', '.'))
+            hasil4.innerHTML = proses4.toLocaleString('id-ID')
+        }
+    </script>
+</body>
+
+</html>

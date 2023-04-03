@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Square Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" type="image" href="/images/logo.png" />
+</head>
+
+<body>
+    <div class="navbar">
+        <div>
+            <a href="/kerucut.html">Kerucut</a>
+            <a href="/index.html">Lingkaran</a>
+            <a href="/bola.html">Bola</a>
+            <a href="/Tabung.html">Tabung</a>
+        </div>
+    </div>
+    <div class="container">
+        <label>Luas Permukaan kerucut (22/7)</label><br />
+        <div>
+            <input type="text" id="r" placeholder="Jari-jari (r)" /><br />
+            <input type="text" id="s" placeholder="Garis-pelukis (s)" />
+        </div>
+        <button id="luas" onclick="luasPermukaan()">Calculate</button>
+        <label style="font-weight: bold;">Hasil = <label id="hasil"></label></label>
+    </div>
+    <hr />
+    <div class="container2">
+        <label>Luas Permukaan kerucut 3.14</label><br />
+        <div>
+            <input type="text" id="r2" placeholder="Jari-jari(r)" /><br />
+            <input type="text" id="s2" placeholder="Garis-pelukis (s)" />
+        </div>
+        <button id="luas2" onclick="luasPermukaan2()">Calculate</button>
+        <label style="font-weight: bold;">Hasil = <label id="hasil2"></label></label>
+    </div>
+    <hr />
+    <div class="container2">
+        <label>Volume kerucut 22/7</label><br />
+        <div>
+            <input type="text" id="r3" placeholder="Jari-jari (r)" /><br />
+            <input type="text" id="t" placeholder="tinggi (t)" />
+        </div>
+        <button id="luas3" onclick="luasPermukaan3()">Calculate</button>
+        <label style="font-weight: bold;">Hasil = <label id="hasil3"></label></label>
+    </div>
+
+    <script>
+        const jariJari = document.getElementById('r')
+        const hasil = document.getElementById('hasil')
+        const jariJari2 = document.getElementById('r2')
+        const hasil2 = document.getElementById('hasil2')
+        const jariJari3 = document.getElementById('r3')
+        const hasil3 = document.getElementById('hasil3')
+        const jariJari4 = document.getElementById('r4')
+        const hasil4 = document.getElementById('hasil4')
+
+        function luasPermukaan(value) {
+            const rValue = parseFloat(r.value.replace(',', '.'));
+            const sValue = parseFloat(s.value.replace(',', '.'));
+            const proses = rValue * 22 / 7 * (rValue + sValue);
+            hasil.innerHTML = proses.toLocaleString();
+        }
+
+        function luasPermukaan2(value) {
+            const r2Value = parseFloat(r2.value.replace(',', '.'));
+            const s2Value = parseFloat(s2.value.replace(',', '.'));
+            const proses2 = r2Value * 3.14 * (r2Value + s2Value);
+            hasil2.innerHTML = proses2.toLocaleString();
+        }
+
+        function luasPermukaan3(value) {
+            const r3Value = parseFloat(r3.value.replace(',', '.'));
+            const tValue = parseFloat(t.value.replace(',', '.'));
+            const proses3 = r3Value * 1 / 3 * 22 / 7 * tValue * r3Value;
+            hasil3.innerHTML = proses3.toLocaleString();
+        }
+    </script>
+</body>
+
+</html>
